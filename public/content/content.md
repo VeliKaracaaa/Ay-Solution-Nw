@@ -131,14 +131,14 @@ Privacy & terms
 
 src/
 ├── components/
+|   ├── Navigation.astro
 │   ├── Hero.astro
-│   ├── Feature.astro
-│   ├── HowItWorks.astro
-│   ├── Diets.astro
-│   ├── Meals.astro
-│   ├── CTA.astro
-│   ├── Prising.astro
-│   ├── Gallery.astro
-│   ├── Testimonials.astro
 │   ├── FeaturedIn.astro
+│   ├── HowItWorks.astro
+│   ├── Meals.astro and (list of Diets)
+│   ├── Prising.astro + Feature
+│   ├── Testimonials.astro + Gallery
+│   ├── CTA.astro
 │   └── Footer.astro
+
+import.meta.glob
