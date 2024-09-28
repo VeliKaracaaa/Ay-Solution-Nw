@@ -1,0 +1,18 @@
+---
+import { frontmatter } from '../content/post/content-hero.md';
+console.log(frontmatter); // Log the frontmatter to check if it’s imported correctly
+---
+
+<!-- Hero section -->
+<section>
+    <!-- Text box -->
+    <div>
+		<h1>{frontmatter.headline}</h1>
+        <!-- Description -->
+        <p>{frontmatter.summary}</p>
+    </div>
+    <!-- Image box -->
+    <div>
+        <img src="" alt="Hero image" />
+    </div>
+</section>
