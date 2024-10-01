@@ -1,18 +1,24 @@
 ---
-import { frontmatter } from '../content/post/content-hero.md';
-console.log(frontmatter); // Log the frontmatter to check if it’s imported correctly
+import { Image } from "astro:assets";
+import heroImage from "../content/img/hero.png";
 ---
 
-<!-- Hero section -->
 <section>
-    <!-- Text box -->
-    <div>
-		<h1>{frontmatter.headline}</h1>
-        <!-- Description -->
-        <p>{frontmatter.summary}</p>
-    </div>
-    <!-- Image box -->
-    <div>
-        <img src="" alt="Hero image" />
+    <div class="grid grid-cols-2 max-w-screen-xl mx-auto my-0">
+        <div>
+            <h1 class="text-6xl text-gray-600">
+                A healthy meal delivered to your door, every single day
+            </h1>
+            <p class="text-4xl">
+                The smart 365-days-per-year food subscription that will make you
+                eat healthy again. Tailored to your personal tastes and
+                nutritional needs. We have delivered 250,000+ meals last year!
+            </p>
+            <a href="#">Start eating well</a>
+            <a href="#">Learn more &darr;</a>
+        </div>
+        <div>
+            <Image src={heroImage} alt="Hero image" />
+        </div>
     </div>
 </section>
