@@ -3,19 +3,29 @@ import { Image } from "astro:assets";
 import heroImage from "../content/img/hero.png";
 ---
 
-<section>
-    <div class="grid grid-cols-2 max-w-screen-xl mx-auto my-0">
+<section class="bg-sky-100 py-24">
+    <div
+        class="grid grid-cols-2 max-w-screen-xl mx-auto my-0 items-center gap-24"
+    >
         <div>
-            <h1 class="text-6xl text-gray-600">
+            <h1 class="text-6xl text-gray-600 tracking-tighter mb-8">
                 A healthy meal delivered to your door, every single day
             </h1>
-            <p class="text-4xl">
+            <p class="text-4xl mb-12">
                 The smart 365-days-per-year food subscription that will make you
                 eat healthy again. Tailored to your personal tastes and
                 nutritional needs. We have delivered 250,000+ meals last year!
             </p>
-            <a href="#">Start eating well</a>
-            <a href="#">Learn more &darr;</a>
+            <a
+                href="#"
+                class="inline-block rounded-xl bg-sky-400 px-8 py-4 text-4xl font-semibold text-white hover:bg-sky-500 active:bg-sky-500 transition-colors duration-300 mr-4"
+                >Start eating well</a
+            >
+            <a
+                href="#"
+                class="inline-block rounded-xl bg-white px-8 py-4 text-4xl font-semibold text-black shadow-sm hover:bg-sky-100 hover:ring-4 hover:ring-inset hover:ring-white active:bg-sky-100 transition-colors duration-300"
+                >Learn more &darr;</a
+            >
         </div>
         <div>
             <Image src={heroImage} alt="Hero image" />
