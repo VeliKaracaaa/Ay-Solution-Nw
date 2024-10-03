@@ -1,12 +1,15 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
 import Hero from "../components/Hero.astro";
-const pageTitle = "Home Page";
+import NosSolutions from "../components/NosSolutions.astro";
+
+const pageTitle = "Acceuil";
 ---
 
 <HomeLayout pageTille={pageTitle}>
 	<main>
 		<Hero />
+		<NosSolutions />
 	</main>
 </HomeLayout>
 <!-- <BaseLayout pageTitle={pageTitle}>
