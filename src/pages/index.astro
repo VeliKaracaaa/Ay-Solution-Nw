@@ -1,9 +1,14 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
+import Hero from "../components/Hero.astro";
 const pageTitle = "Home Page";
 ---
 
-<HomeLayout pageTille={pageTitle} />
+<HomeLayout pageTille={pageTitle}>
+	<main>
+		<Hero />
+	</main>
+</HomeLayout>
 <!-- <BaseLayout pageTitle={pageTitle}>
 	<h2>My awesome blog subtitle</h2>
 </BaseLayout> -->
