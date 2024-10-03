@@ -1,42 +1,42 @@
 ------- 01 TYPOGRAPHY SYSTEME ------- / Using Tailwind
+Browser Font : Rubik (google font)
 
 - FONT SIZE SYSTEM (px) / 1rem = 16px
     10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
-- H1 : text-6xl (60px)
-- Paragraphe : text-4xl
-- Button : text-xl (20px) / py-4 (16px) / px-8 (32px) / rounded-xl (12px) 
-
 - Font-weight:
-    Default: 600
+    Default: 400 , font-medium (500), font-semibold (600), font-bold (700) 
 
 - Line heights:
     Default: 1
 
+- Title : 
+    Default: text-8xl
+- Paragraphe : 
+    Default: text-4xl, text-3xl, text-2xl
+- Button : 
+    Default: text-4xl
+
 ------- 02 COLORS -------
 
-background-color : Tailwind palette - Sky
+background-color : Tailwind palette -Sky
 
 - Primary: bg-sky-400
 - Tints: bg-sky-100, text-white
 - Shades: bg-sky-800
 - Accents:
-- Greys: #555, text-gray-800 (#4b5563)
+- Greys: #555, text-gray-800, text-gray-700
 
 ------- 03 SHADOWS -------
 
 ------- 04 BORDER-RADIUS -------
+    Default: border-4
 
 ------- 05 WHITE SPACE -------
 
 ------- 05 SPACING SYSTEM (px) -------
 
 - 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-- H1 : mb-8 (32px)
-- Paragraphe : mb-12 (48px)
-- Gap : gap-24 (96px)
-- Padding top and bottom : py-24 (96px)
 
 -------------------------------------------------------------
 index.astro :
