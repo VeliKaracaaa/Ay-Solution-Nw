@@ -11,11 +11,20 @@ Browser Font : Rubik (google font)
     Default: 1
 
 - Title : 
-    Default: text-8xl
+    H1: text-8xl text-sky-700 tracking-tighter font-bold
+    H2: text-7xl text-sky-700 tracking-tighter font-bold
+
 - Paragraphe : 
-    Default: text-4xl, text-3xl, text-2xl
+    Default: text-4xl 
+        Nav: text-3xl 
+        Small: text-2xl
+
 - Button : 
     Default: text-4xl
+
+- Letter spacing :
+    - tracking-tighter (-0.5)
+    - tracking-wide (0.8px)
 
 ------- 02 COLORS -------
 
@@ -39,6 +48,10 @@ background-color : Tailwind palette -Sky
 - 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 -------------------------------------------------------------
+
+Center container: max-w-screen-xl mx-auto py-0 px-8
+grid : grid grid-cols-2 gap-24 py-0 px-8
+
 index.astro :
 
 ---
