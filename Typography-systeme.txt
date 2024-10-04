@@ -5,24 +5,25 @@ Browser Font : Rubik (google font)
     10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
 - Font-weight:
-    Default: 400 , font-medium (500), font-semibold (600), font-bold (700)
+    Default: 400, font-medium (500), font-semibold (600), font-bold (700)
 
 - Line heights:
     Default: 1
 
-- Title : 
-    H1: text-8xl text-sky-700 tracking-tighter font-bold
+- Title:
+    H1: text-8xl leading-7 text-sky-700 tracking-tighter font-bold
     H2: text-7xl text-sky-700 tracking-tighter font-bold
-
-- Paragraphe : 
+    h3: text-6xl text-sky-700 tracking-tighter font-bold
+- Paragraphe: 
     Default: text-4xl 
         Nav: text-3xl 
         Small: text-2xl
+        Height: leading-normal, leading-loose
 
-- Button : 
+- Button:
     Default: text-4xl
 
-- Letter spacing :
+- Letter spacing:
     - tracking-tighter (-0.5)
     - tracking-wide (0.8px)
 
