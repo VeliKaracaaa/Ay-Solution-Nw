@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import akdag from "../content/img/logos/akdag.png";
+import djKara from "../content/img/logos/djKara.png";
+import anaEntreprise from "../content/img/logos/anaEntreprise.png";
+import okanManagement from "../content/img/logos/orkanManagement.png";
+import orgelet from "../content/img/logos/orgelet.png";
+import seral from "../content/img/logos/seral.png";
+---
+
+<section class="py-12 pt-16 pb-8">
+    <div class="max-w-screen-xl mx-auto py-0">
+        <h2
+            class="text-3xl text-gray-600 text-center tracking-tighter font-medium uppercase mb-20"
+        >
+            Nos partenaires
+        </h2>
+        <div class="flex justify-around pt-0 px-8 opacity-80 h-48 w-auto">
+            <Image src={akdag} alt="logo akdag" />
+            <Image src={djKara} alt="logo djKara" />
+            <Image src={anaEntreprise} alt="logo anaEntreprise" />
+            <Image src={okanManagement} alt="logo okanManagement" />
+            <Image src={orgelet} alt="logo orgelet" />
+            <Image src={seral} alt="logo seral" />
+        </div>
+    </div>
+</section>
