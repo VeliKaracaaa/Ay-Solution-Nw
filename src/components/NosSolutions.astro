@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import digitale from "../content/img/app/digitale.jpg";
+import camera from "../content/img/app/camera.jpg";
+import paymentTerminal from "../content/img/app/paymentTerminalY.jpg";
+import reseaux from "../content/img/app/reseaux.jpg";
 ---
 
 <section class="py-40 px-0">
@@ -13,47 +16,105 @@ import digitale from "../content/img/app/digitale.jpg";
             Des services sur mesure pour répondre à vos besoins
         </h2>
     </div>
-    <div class="max-w-screen-xl mx-auto grid grid-cols-2 gap-24 py-0 px-8">
+    <div
+        class="max-w-screen-xl mx-auto grid grid-cols-2 items-center gap-x-16 gap-y-24 py-0 px-8"
+    >
         <!-- STEP 01 -->
         <div>
             <p class="text-9xl font-semibold text-gray-300 mb-3">01</p>
             <h3 class="text-7xl text-sky-700 tracking-tighter font-bold mb-10">
                 Solution Digitale
             </h3>
-            <p class="text-4xl leading-loose">
+            <p class="text-4xl leading-normal">
                 Le site web qui vous donnera de la visibilité. Créez votre site
                 Web personnalisé de qualité avec les dernières technologies web
-                Disponibles
+                disponibles
             </p>
+            <ol class="list-disc p-10">
+                <li class="text-4xl leading-normal">
+                    Création de site web & Application web
+                </li>
+                <li class="text-4xl leading-normal">Conception graphique</li>
+            </ol>
         </div>
         <div>
-            <Image src={digitale} alt="image for digitale" />
+            <Image src={digitale} alt="image for digitale" class="" />
         </div>
-
         <!-- STEP 02 -->
         <div>
-            <Image src={digitale} alt="sécurité éléctronique" />
+            <Image
+                src={camera}
+                alt="sécurité éléctronique"
+                class="w-auto h-auto"
+            />
         </div>
         <div>
-            <p>02</p>
-            <h3>Sécurité éléctronique</h3>
-            <p>
+            <p class="text-9xl font-semibold text-gray-300 mb-3">02</p>
+            <h3 class="text-7xl text-sky-700 tracking-tighter font-bold mb-10">
+                Sécurité éléctronique
+            </h3>
+            <p class="text-4xl leading-normal">
                 Protégez votre propriété, grâce à notre service de
                 vidéosurveillance haut de gamme
             </p>
+            <ol class="list-disc p-10">
+                <li class="text-4xl leading-snug">Vidéo surveillance</li>
+                <li class="text-4xl leading-snug">Systèmes d'alarme</li>
+                <li class="text-4xl leading-snug">Contrôle d'accès</li>
+                <li class="text-4xl leading-snug">Interphonie</li>
+            </ol>
         </div>
-
         <!-- STEP 03 -->
         <div>
-            <p>03</p>
-            <h3>Encaissement</h3>
-            <p>
+            <p class="text-9xl font-semibold text-gray-300 mb-3">03</p>
+            <h3 class="text-7xl text-sky-700 tracking-tighter font-bold mb-10">
+                Gestion d'encaissement
+            </h3>
+            <p class="text-4xl leading-normal">
                 Encaissement rapide et fiable, des solutions d'encaissement
                 adaptées à vos besoins professionnels
             </p>
+            <ol class="list-disc p-10">
+                <li class="text-4xl leading-snug">
+                    Borne de commande automatisées
+                </li>
+                <li class="text-4xl leading-snug">
+                    Caisse enregistreuse tactile
+                </li>
+                <li class="text-4xl leading-snug">Gestions des stocks</li>
+            </ol>
         </div>
         <div>
-            <Image src={digitale} alt="encaissement" />
+            <Image src={paymentTerminal} alt="encaissement" />
+        </div>
+        <!-- STEP 4 -->
+        <div>
+            <Image
+                src={reseaux}
+                alt="sécurité éléctronique"
+                class="w-auto h-auto"
+            />
+        </div>
+        <div>
+            <p class="text-9xl font-semibold text-gray-300 mb-3">04</p>
+            <h3 class="text-7xl text-sky-700 tracking-tighter font-bold mb-10">
+                Informatique & Télécom
+            </h3>
+            <p class="text-4xl leading-normal">
+                Protégez votre propriété, grâce à notre service de
+                vidéosurveillance haut de gamme
+            </p>
+            <ol class="list-disc p-10">
+                <li class="text-4xl leading-snug">Maintenace informatique</li>
+                <li class="text-4xl leading-snug">Solution VoIP</li>
+                <li class="text-4xl leading-snug">
+                    Réseaux cablés et sans fil
+                </li>
+                <li class="text-4xl leading-snug">Sécurité des données</li>
+                <li class="text-4xl leading-snug">
+                    Réparation de produits (tablette, téléphone, pc)
+                </li>
+            </ol>
         </div>
     </div>
 </section>
