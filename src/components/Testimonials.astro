@@ -38,6 +38,21 @@ const testimonials = [
         text: "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
     },
 ];
+
+const galleryImages = [
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
+    gallery9,
+    gallery10,
+    gallery11,
+    gallery11,
+];
 ---
 
 <section class="grid grid-cols-2 items-center bg-sky-100">
@@ -67,146 +82,20 @@ const testimonials = [
                     </figure>
                 ))
             }
-
-            <!-- <figure>
-                <Image
-                    src={dave}
-                    alt="image for digitale"
-                    class="w-16 rounded-full mb-4"
-                />
-                <blockquote class="text-4xl leading-normal mb-4">
-                    Inexpensive, healthy and great-tasting meals, without even
-                    having to order manually! It feels truly magical.
-                </blockquote>
-                <p class="text-3xl">— Dave Bryson</p>
-            </figure>
-            <figure>
-                <Image
-                    src={hannah}
-                    alt="image for digitale"
-                    class="w-16 rounded-full mb-4"
-                />
-                <blockquote class="text-4xl leading-normal mb-4">
-                    The AI algorithm is crazy good, it chooses the right meals
-                    for me every time. It's amazing not to worry about food
-                    anymore!
-                </blockquote>
-                <p class="text-3xl">— Ben Hadley</p>
-            </figure>
-            <figure>
-                <Image
-                    src={steve}
-                    alt="image for digitale"
-                    class="w-16 rounded-full mb-4"
-                />
-                <blockquote class="text-4xl leading-normal mb-4">
-                    Omnifood is a life saver! I just started a company, so
-                    there's no time for cooking. I couldn't live without my
-                    daily meals now!
-                </blockquote>
-                <p class="text-3xl">— Steve Miller</p>
-            </figure>
-            <figure>
-                <Image
-                    src={ben}
-                    alt="image for digitale"
-                    class="w-16 rounded-full mb-4"
-                />
-                <blockquote class="text-4xl leading-normal mb-4">
-                    I got Omnifood for the whole family, and it frees up so much
-                    time! Plus, everything is organic and vegan and without
-                    plastic.
-                </blockquote>
-                <p class="text-3xl">— Hannah Smith</p>
-            </figure>
-        </div> -->
         </div>
-        <!-- Gallery -->
-        <div class="grid grid-cols-3 gap-4 p-4">
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery1}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery2}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery3}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery4}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery5}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery5}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery6}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery7}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery8}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery9}
-                    alt="image for gallery"
-                    class="block w-full transition-all duration-400"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery10}
-                    alt="image for gallery"
-                    class="block w-full transition-all duration-400"
-                />
-            </figure>
-            <figure class="overflow-hidden">
-                <Image
-                    src={gallery11}
-                    alt="image for gallery"
-                    class="transform transition-transform duration-300 hover:scale-110"
-                />
-            </figure>
-        </div>
+    </div>
+    <!-- Gallery -->
+    <div class="grid grid-cols-3 gap-4 p-4">
+        {
+            galleryImages.map((image, index) => (
+                <figure class="overflow-hidden">
+                    <Image
+                        src={image}
+                        alt="Gallery image"
+                        class="transform transition-transform duration-300 hover:scale-110"
+                    />
+                </figure>
+            ))
+        }
     </div>
 </section>
