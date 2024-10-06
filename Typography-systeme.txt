@@ -19,6 +19,7 @@ Browser Font : Rubik (google font)
         Nav: text-3xl 
         Small: text-2xl
         Height: leading-normal, leading-loose
+        span: block text-3xl text-sky-500 font-medium uppercase mb-6 tracking-wide
 
 - Button:
     Default: text-4xl
