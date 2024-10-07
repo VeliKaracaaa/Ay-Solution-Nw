@@ -15,6 +15,14 @@ const { pageTitle } = Astro.props;
             href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
             rel="stylesheet"
         />
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
@@ -23,7 +31,7 @@ const { pageTitle } = Astro.props;
         <Header />
         <h1>{pageTitle}</h1>
         <slot />
-        <!-- <Footer /> -->
+        <Footer />
         <script>
             import "../scripts/menu.js";
         </script>
