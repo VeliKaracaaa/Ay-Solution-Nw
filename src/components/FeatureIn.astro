@@ -6,6 +6,15 @@ import anaEntreprise from "../content/img/logos/anaEntreprise.png";
 import okanManagement from "../content/img/logos/orkanManagement.png";
 import orgelet from "../content/img/logos/orgelet.png";
 import seral from "../content/img/logos/seral.png";
+
+const LogoPartners = [
+    { src: akdag, alt: "logo akdag" },
+    { src: djKara, alt: "logo djKara" },
+    { src: anaEntreprise, alt: "logo anaEntreprise" },
+    { src: okanManagement, alt: "logo okanManagement" },
+    { src: orgelet, alt: "logo orgelet" },
+    { src: seral, alt: "logo seral" },
+];
 ---
 
 <section class="pt-16 pb-8">
@@ -16,16 +25,15 @@ import seral from "../content/img/logos/seral.png";
             Nos partenaires
         </h2>
         <div class="flex justify-around items-center">
-            <Image src={akdag} alt="logo akdag" class="h-48" />
-            <Image src={djKara} alt="logo djKara" class="h-48" />
-            <Image src={anaEntreprise} alt="logo anaEntreprise" class="h-72" />
-            <Image
-                src={okanManagement}
-                alt="logo okanManagement"
-                class="h-48"
-            />
-            <Image src={orgelet} alt="logo orgelet" class="h-48" />
-            <Image src={seral} alt="logo seral" class="h-48" />
+            {
+                LogoPartners.map((partner) => (
+                    <Image
+                        src={partner.src}
+                        alt={partner.alt}
+                        class="h-48 lg:h-40"
+                    />
+                ))
+            }
         </div>
     </div>
 </section>
