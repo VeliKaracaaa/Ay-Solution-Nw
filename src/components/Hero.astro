@@ -18,33 +18,35 @@ const customers = [
 ];
 ---
 
-<section class="bg-sky-100 pt-16 pb-24">
+<section class="bg-sky-100 pt-12 pb-24">
     <div
-        class="max-w-screen-2xl mx-auto grid grid-cols-2 items-center gap-24 my-0 py-0 px-8 lg:gap-12"
+        class="container mx-auto px-8 grid grid-cols-1 gap-16 text-center lg:grid-cols-2 lg:items-center lg:gap-12 xl:gap-24"
     >
         <div>
             <h1
-                class="text-8xl text-sky-700 tracking-tighter font-bold mb-20 lg:text-7xl"
+                class="text-sky-700 text-4xl mb-8 tracking-tighter font-bold lg:text-7xl xl:text-8xl"
             >
                 Transformez votre entreprise avec notre expertise
             </h1>
-            <p class="text-4xl leading-normal mb-20 lg:text-3xl">
+            <p class="text-2xl leading-normal mb-12 lg:text-3xl xl:text-4xl">
                 Services complets : Sécurité éléctronique, Informatique &
                 Télécom, Digitale, Gestion d'encaissement
             </p>
             <a
                 href="#"
-                class="inline-block rounded-xl bg-sky-400 px-5 py-4 text-3xl font-semibold text-white hover:bg-sky-800 active:bg-sky-800 transition-colors duration-300 mr-4 lg:text-2xl"
+                class="inline-block text-xl rounded-xl bg-sky-400 px-5 py-4 font-semibold text-white hover:bg-sky-800 active:bg-sky-800 transition-colors duration-300 mr-4 lg:text-2xl xl:text-3xl"
             >
                 Contactez-nous: 07025026014
             </a>
             <a
                 href="#nos-solutions"
-                class="inline-block rounded-xl bg-white px-5 py-4 text-4xl font-semibold text-black shadow-sm hover:bg-sky-100 hover:ring-4 hover:ring-inset hover:ring-white active:bg-sky-100 transition-colors duration-300 lg:text-2xl"
+                class="inline-block text-xl rounded-xl bg-white px-5 py-4 font-semibold text-black shadow-sm hover:bg-sky-100 hover:ring-4 hover:ring-inset hover:ring-white active:bg-sky-100 transition-colors duration-300 lg:text-2xl xl:text-4xl"
             >
                 En savoir plus &darr;
             </a>
-            <div class="flex items-center gap-4 mt-32 lg:mt-20">
+            <div
+                class="mt-8 text-xl flex items-center justify-center gap-4 lg:mt-20"
+            >
                 <div class="flex">
                     {
                         customers.map((customer) => (
@@ -56,14 +58,16 @@ const customers = [
                         ))
                     }
                 </div>
-                <p class="text-3xl font-semibold lg:text-2xl">
+                <p class="font-semibold xl:text-3xl lg:text-2xl">
                     <span class="text-sky-500 font-bold">60+ </span>entreprises
                     nous font confiance
                 </p>
             </div>
         </div>
-        <div>
-            <Image src={heroImage} alt="Hero image" />
-        </div>
+        <Image
+            src={heroImage}
+            alt="Hero image"
+            class="w-3/5 justify-self-center"
+        />
     </div>
 </section>
