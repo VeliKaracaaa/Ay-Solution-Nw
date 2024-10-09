@@ -59,14 +59,16 @@ const galleryImages = [
     <div class="p-24">
         <!-- heading Testimonial -->
         <span
-            class="block text-3xl text-sky-500 font-medium uppercase mb-6 tracking-wide"
+            class="block text-3xl text-sky-500 font-medium uppercase mb-6 tracking-wide lg:text-2xl"
             >Témoignages</span
         >
-        <h2 class="text-7xl text-sky-700 tracking-tighter font-bold mb-24">
+        <h2
+            class="text-7xl text-sky-700 tracking-tighter font-bold mb-24 lg:text-6xl"
+        >
             L'expérience de nos clients avec notre service
         </h2>
         <!-- Testimonial container -->
-        <div class="grid grid-cols-2 gap-x-32 gap-y-20">
+        <div class="grid grid-cols-2 gap-x-32 gap-y-20 lg:gap-x-10">
             {
                 testimonials.map((testimonial) => (
                     <figure>
@@ -75,17 +77,17 @@ const galleryImages = [
                             alt={`Image of ${testimonial.name}`}
                             class="w-16 rounded-full mb-4"
                         />
-                        <blockquote class="text-3xl leading-normal mb-4">
+                        <blockquote class="text-3xl leading-normal mb-4 lg:text-2xl">
                             {testimonial.text}
                         </blockquote>
-                        <p class="text-2xl">— {testimonial.name}</p>
+                        <p class="text-2xl lg:text-xl">— {testimonial.name}</p>
                     </figure>
                 ))
             }
         </div>
     </div>
     <!-- Gallery -->
-    <div class="grid grid-cols-3 gap-4 p-4">
+    <div class="grid grid-cols-3 gap-4 p-4 lg:grid-cols-2">
         {
             galleryImages.map((image, index) => (
                 <figure class="overflow-hidden">
