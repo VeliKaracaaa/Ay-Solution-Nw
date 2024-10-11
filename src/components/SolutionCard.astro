@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import digitale from "../content/img/app/digitale.jpg";
+import camera from "../content/img/app/camera.jpg";
+import paymentTerminal from "../content/img/app/paymentTerminalY.jpg";
+import reseaux from "../content/img/app/reseaux.jpg";
+
+const solutions = [
+    {
+        id: "digitale",
+        number: "01",
+        title: "Solution Digitale",
+        text: "Le site web qui vous donnera de la visibilité. Créez votre site Web personnalisé de qualité avec les dernières technologies web disponibles",
+        lists: [
+            "Création de site web & Application web",
+            "Conception graphique",
+        ],
+        src: digitale,
+        alt: "digitale"
+    },
+    {
+        id: "securite-electronique",
+        number: "02",
+        title: "Sécurité éléctronique",
+        text: "Protégez votre propriété, grâce à notre service de vidéosurveillance haut de gamme",
+        lists: [
+            "Vidéo surveillance",
+            "Systèmes d'alarme",
+            "Contrôle d'accès",
+            "Interphonie",
+        ],
+        src: camera,
+        alt: "securite-electronique"
+    },
+    {
+        id: "gestion-encaissement",
+        number: "03",
+        title: "Gestion d'encaissement",
+        text: "Encaissement rapide et fiable, des solutions d'encaissement adaptées à vos besoins professionnels",
+        lists: [
+            "Borne de commande automatisées",
+            "Caisse enregistreuse tactile",
+            "Gestions des stocks",
+        ],
+        src: paymentTerminal,
+        alt: "gestion encaissement"
+    },
+    {
+        id: "informatique-telecom",
+        number: "04",
+        title: "Informatique & Télécom",
+        text: "Assurez la continuité de votre activité avec nos solutions, une efficacité optimale.",
+        lists: [
+            "Maintenace informatique",
+            "Solution VoIP",
+            "Réseaux cablés et sans fil",
+            "Sécurité des données",
+            "Réparation de produits (tablette, téléphone, pc)",
+        ],
+        src: reseaux,
+        alt: "informatique telecom"
+    },
+];
+---
+
+<div class="container mx-auto px-8 ">
+    {solutions.map((solution, index) => (
+        <div
+            class={`flex flex-col gap-y-12 mb-12 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} w-full gap-x-8 md:gap-x-12`}
+        >
+            <!-- Texte -->
+            <div class="md:w-1/2">
+                <p class="mb-3 text-gray-300 text-6xl font-semibold md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+                    {solution.number}
+                </p>
+                <h3 class="mb-8 text-sky-700 text-5xl tracking-tighter font-bold md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-7xl">
+                    {solution.title}
+                </h3>
+                <p class="text-3xl leading-normal md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                    {solution.text}
+                </p>
+                <ol class="pl-12 pt-8 list-disc text-3xl md:text-2xl md:pl-7 lg:text-3xl lg:pl-12 xl:text-4xl 2xl:text-5xl 2xl:pl-16">
+                    {solution.lists.map((list) => (
+                        <li>{list}</li>
+                    ))}
+                </ol>
+            </div>
+            
+            <!-- Image -->
+            <div class="md:w-1/2">
+                <Image src={solution.src} alt={solution.alt} class="h-full w-full" />
+            </div>
+        </div>
+    ))}
+</div>
