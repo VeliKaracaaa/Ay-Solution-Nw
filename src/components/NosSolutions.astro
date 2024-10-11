@@ -4,55 +4,100 @@ import digitale from "../content/img/app/digitale.jpg";
 import camera from "../content/img/app/camera.jpg";
 import paymentTerminal from "../content/img/app/paymentTerminalY.jpg";
 import reseaux from "../content/img/app/reseaux.jpg";
+import HeaderSection from "./HeaderSection.astro";
+
+const HeadersubTitle = "Nos Solutions";
+const HeaderTitle = "Des services sur mesure pour répondre à vos besoins";
+
+const solutions = [
+    {
+        number: "01",
+        title: "Solution Digitale",
+        text: "Le site web qui vous donnera de la visibilité. Créez votre site Web personnalisé de qualité avec les dernières technologies web disponibles",
+        list: [
+            "Création de site web & Application web",
+            "Conception graphique",
+        ],
+        src: { digitale },
+    },
+    {
+        number: "02",
+        title: "Sécurité éléctronique",
+        text: "Protégez votre propriété, grâce à notre service de vidéosurveillance haut de gamme",
+        list: [
+            "Vidéo surveillance",
+            "Systèmes d'alarme",
+            "Contrôle d'accès",
+            "Interphonie",
+        ],
+        src: { camera },
+    },
+    {
+        number: "03",
+        title: "Gestion d'encaissement",
+        text: "Encaissement rapide et fiable, des solutions d'encaissement adaptées à vos besoins professionnels",
+        list: [
+            "Borne de commande automatisées",
+            "Caisse enregistreuse tactile",
+            "Gestions des stocks",
+        ],
+        src: { paymentTerminal },
+    },
+    {
+        number: "04",
+        title: "Informatique & Télécom",
+        text: "Assurez la continuité de votre activité avec nos solutions innovantes en informatique et télécom, conçues pour vous offrir une efficacité optimale.",
+        list: [
+            "Maintenace informatique",
+            "Solution VoIP",
+            "Réseaux cablés et sans fil",
+            "Sécurité des données",
+            "Réparation de produits (tablette, téléphone, pc)",
+        ],
+        src: { reseaux },
+    },
+];
 ---
 
 <section class="pt-24" id="nos-solutions">
-    <div class="container mx-auto px-8">
-        <span
-            class="block mb-4 text-sky-500 text-2xl font-medium uppercase tracking-wider lg:text-3xl xl:text-4xl 2xl:text-5xl"
-            >Nos Solutions</span
-        >
-        <h2
-            class="mb-12 text-sky-700 text-5xl tracking-tighter font-bold lg:text-6xl xl:text-7xl 2xl:text-8xl"
-        >
-            Des services sur mesure pour répondre à vos besoins
-        </h2>
-    </div>
+    <HeaderSection HeadersubTitle={HeadersubTitle} HeaderTitle={HeaderTitle} />
     <div
         class="container mx-auto px-8 grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 md:gap-y-16 md:items-center"
     >
         <!-- STEP 01 -->
-        <div id="digitale">
+        <div id="digitale" class="order-1">
             <p
-                class="mb-3 text-gray-300 text-6xl font-semibold md:text-5xl lg:text-7xl xl:text-8xl"
+                class="mb-3 text-gray-300 text-5xl font-semibold md:text-5xl lg:text-7xl xl:text-8xl"
             >
                 01
             </p>
             <h3
-                class="mb-8 text-sky-700 text-5xl tracking-tighter font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+                class="mb-8 text-sky-700 text-4xl tracking-tighter font-bold md:text-4xl lg:text-5xl xl:text-6xl"
             >
                 Solution Digitale
             </h3>
             <p
-                class="text-3xl leading-normal md:text-2xl lg:text-3xl xl:text-4xl"
+                class="text-2xl leading-normal md:text-2xl lg:text-3xl xl:text-4xl"
             >
                 Le site web qui vous donnera de la visibilité. Créez votre site
                 Web personnalisé de qualité avec les dernières technologies web
                 disponibles
             </p>
             <ol
-                class="pl-10 pt-8 list-disc text-3xl md:text-2xl lg:text-3xl xl:text-4xl"
+                class="pl-10 pt-8 list-disc text-2xl md:text-2xl lg:text-3xl xl:text-4xl"
             >
                 <li>Création de site web & Application web</li>
                 <li>Conception graphique</li>
             </ol>
         </div>
-        <div>
+        <div class="order-2">
             <Image src={digitale} alt="image for digitale" />
         </div>
         <!-- STEP 02 -->
-        <Image src={camera} alt="sécurité éléctronique" />
-        <div id="securite-electronique">
+        <div class="order-4 md:order-3">
+            <Image src={camera} alt="sécurité éléctronique" />
+        </div>
+        <div id="securite-electronique" class="order-3">
             <p
                 class="mb-3 text-gray-300 text-6xl font-semibold md:text-5xl lg:text-7xl xl:text-8xl"
             >
@@ -79,7 +124,7 @@ import reseaux from "../content/img/app/reseaux.jpg";
             </ol>
         </div>
         <!-- STEP 03 -->
-        <div id="gestion-encaissement">
+        <div id="gestion-encaissement" class="order-5">
             <p
                 class="mb-3 text-gray-300 text-6xl font-semibold md:text-5xl lg:text-8xl xl:text-8xl"
             >
@@ -104,10 +149,14 @@ import reseaux from "../content/img/app/reseaux.jpg";
                 <li>Gestions des stocks</li>
             </ol>
         </div>
-        <Image src={paymentTerminal} alt="encaissement" />
+        <div class="order-6">
+            <Image src={paymentTerminal} alt="encaissement" />
+        </div>
         <!-- STEP 4 -->
-        <Image src={reseaux} alt="sécurité éléctronique" />
-        <di id="informatique-telecom">
+        <div class="order-8 md:order-7">
+            <Image src={reseaux} alt="sécurité éléctronique" />
+        </div>
+        <div id="informatique-telecom" class="order-7">
             <p
                 class="mb-3 text-gray-300 text-6xl font-semibold md:text-5xl lg:text-7xl xl:text-8xl"
             >
@@ -133,6 +182,6 @@ import reseaux from "../content/img/app/reseaux.jpg";
                 <li>Sécurité des données</li>
                 <li>Réparation de produits (tablette, téléphone, pc)</li>
             </ol>
-        </di>
+        </div>
     </div>
 </section>

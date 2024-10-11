@@ -1,0 +1,16 @@
+---
+const { HeadersubTitle } = Astro.props;
+const { HeaderTitle } = Astro.props;
+---
+
+<div class="container mx-auto px-8">
+    <span
+        class="block mb-4 text-sky-500 text-xl font-medium uppercase tracking-wider lg:text-2xl xl:text-4xl 2xl:text-5xl"
+        >{HeadersubTitle}</span
+    >
+    <h2
+        class="mb-12 text-sky-700 text-4xl tracking-tighter font-bold md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+    >
+        {HeaderTitle}
+    </h2>
+</div>
