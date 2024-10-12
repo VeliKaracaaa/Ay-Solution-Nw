@@ -9,6 +9,7 @@ import gallery5 from "../content/img/gallery/gallery-5.jpg";
 import gallery6 from "../content/img/gallery/gallery-6.jpg";
 import gallery7 from "../content/img/gallery/gallery-7.jpg";
 import gallery8 from "../content/img/gallery/gallery-8.jpg";
+import gallery9 from "../content/img/gallery/gallery-8.jpg";
 
 const galleryImages = [
     gallery1,
@@ -22,10 +23,10 @@ const galleryImages = [
 ];
 ---
 
-<div class="flex flex-wrap justify-between gap-y-1">
+<div class="flex flex-wrap gap-y-1">
     {
         galleryImages.map((image, index) => (
-            <div class="flex-none w-1/4 p-1">
+            <div class="flex-none w-1/4 p-1 xl:w-1/2">
                 <figure class="overflow-hidden rounded shadow-lg">
                     <Image
                         src={image}
