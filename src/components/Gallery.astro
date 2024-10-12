@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+import gallery1 from "../content/img/gallery/gallery-1.jpg";
+import gallery2 from "../content/img/gallery/gallery-2.jpg";
+import gallery3 from "../content/img/gallery/gallery-3.jpg";
+import gallery4 from "../content/img/gallery/gallery-4.jpg";
+import gallery5 from "../content/img/gallery/gallery-5.jpg";
+import gallery6 from "../content/img/gallery/gallery-6.jpg";
+import gallery7 from "../content/img/gallery/gallery-7.jpg";
+import gallery8 from "../content/img/gallery/gallery-8.jpg";
+
+const galleryImages = [
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
+];
+---
+
+<div class="flex flex-wrap justify-between gap-y-1">
+    {
+        galleryImages.map((image, index) => (
+            <div class="flex-none w-1/4 p-1">
+                <figure class="overflow-hidden rounded shadow-lg">
+                    <Image
+                        src={image}
+                        alt="Gallery image"
+                        class="block transform transition-transform duration-300 hover:scale-105 w-full"
+                    />
+                </figure>
+            </div>
+        ))
+    }
+</div>

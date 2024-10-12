@@ -2,23 +2,12 @@
 import { Image } from "astro:assets";
 
 import HeaderSection from "./HeaderSection.astro";
+import Gallery from "../components/Gallery.astro";
 
 import dave from "../content/img/customers/dave.jpg";
 import hannah from "../content/img/customers/hannah.jpg";
 import steve from "../content/img/customers/steve.jpg";
 import ben from "../content/img/customers/ben.jpg";
-
-import gallery1 from "../content/img/gallery/gallery-1.jpg";
-import gallery2 from "../content/img/gallery/gallery-2.jpg";
-import gallery3 from "../content/img/gallery/gallery-3.jpg";
-import gallery4 from "../content/img/gallery/gallery-4.jpg";
-import gallery5 from "../content/img/gallery/gallery-5.jpg";
-import gallery6 from "../content/img/gallery/gallery-6.jpg";
-import gallery7 from "../content/img/gallery/gallery-7.jpg";
-import gallery8 from "../content/img/gallery/gallery-8.jpg";
-import gallery9 from "../content/img/gallery/gallery-9.jpg";
-import gallery10 from "../content/img/gallery/gallery-10.jpg";
-import gallery11 from "../content/img/gallery/gallery-11.jpg";
 
 const testimonials = [
     {
@@ -43,18 +32,6 @@ const testimonials = [
     },
 ];
 
-const galleryImages = [
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery4,
-    gallery5,
-    gallery6,
-    gallery7,
-    gallery8,
-    gallery9,
-];
-
 const HeadersubTitle = "Témoignages";
 const HeaderTitle = "L'expérience de nos clients avec notre service";
 ---
@@ -63,37 +40,29 @@ const HeaderTitle = "L'expérience de nos clients avec notre service";
     <HeaderSection HeadersubTitle={HeadersubTitle} HeaderTitle={HeaderTitle} />
 
     <div class="container mx-auto">
-        {
-            testimonials.map((testimonial) => (
-                <div class="flex flex-col gap-y-3 mb-12">
-                    <figure>
-                        <Image
-                            src={testimonial.src}
-                            alt={`Image of ${testimonial.name}`}
-                            class="w-[8%] rounded-full"
-                        />
-                    </figure>
-                    <blockquote class="text-2xl leading-normal md:text-3xl">
-                        {testimonial.text}
-                    </blockquote>
-                    <p class="text-xl md:text-2xl">— {testimonial.name}</p>
-                </div>
-            ))
-        }
+        <div class="flex flex-wrap">
+            {
+                testimonials.map((testimonial) => (
+                    <div class="w-full md:w-1/2 mb-8 p-4">
+                        <div class="flex flex-col gap-y-3">
+                            <figure>
+                                <Image
+                                    src={testimonial.src}
+                                    alt={`Image of ${testimonial.name}`}
+                                    class="rounded-full w-24"
+                                />
+                            </figure>
+                            <blockquote class="text-2xl mb-4 leading-normal md:text-3xl">
+                                {testimonial.text}
+                            </blockquote>
+                            <p class="text-xl md:text-2xl">
+                                — {testimonial.name}
+                            </p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
     </div>
-    <div class="container mx-auto flex flex-wrap gap-2">
-        {
-            galleryImages.map((image) => (
-                <div class="w-[32.7%]">
-                    <figure class="overflow-hidden">
-                        <Image
-                            src={image}
-                            alt="Gallery image"
-                            class="block transform transition-transform duration-300 hover:scale-110"
-                        />
-                    </figure>
-                </div>
-            ))
-        }
-    </div>
+    <Gallery />
 </section>
