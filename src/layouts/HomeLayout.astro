@@ -28,12 +28,12 @@ const { pageTitle } = Astro.props;
         <title>{pageTitle}</title>
     </head>
     <body>
-        <!-- <Header /> -->
+        <Header />
         <h1>{pageTitle}</h1>
         <slot />
         <Footer />
-        <script>
+        <!-- <script>
             import "../scripts/menu.js";
-        </script>
+        </script> -->
     </body>
 </html>

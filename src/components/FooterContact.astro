@@ -1,0 +1,13 @@
+---
+const { title, number, adresse } = Astro.props;
+---
+
+<div class="flex flex-col gap-12 md:w-1/4">
+    <p class="text-3xl font-semibold lg:text-4xl">{title}</p>
+    <address
+        class="text-gray-400 text-xl not-italic space-y-4 hover:text-white md:text-xl lg:text-3xl"
+    >
+        <p class="">{adresse}</p><br />
+        <p class="text-white hover:text-gray-400">{number}</p>
+    </address>
+</div>

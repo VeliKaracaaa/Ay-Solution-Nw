@@ -74,10 +74,11 @@ const HeaderTitle = "Des services sur mesure pour répondre à vos besoins";
     <div class="container mx-auto">
         {solutions.map((solution, index) => (
             <div
-                class={`flex flex-col gap-y-12 mb-12 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} w-full gap-x-8 md:gap-x-12`}
+                class={`flex flex-col gap-y-12 mb-12 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} w-full gap-x-8 md:gap-x-12`} id={solution.id}
             >
                 <!-- Texte -->
                 <div class="md:w-1/2">
+                {/* peut ici le id pour l'encrage */}
                     <p class="mb-3 text-gray-300 text-6xl font-semibold md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
                         {solution.number}
                     </p>

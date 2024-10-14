@@ -1,91 +1,55 @@
 ---
-import { Image } from "astro:assets";
 import aySolutionLogo from "../content/img/logos/ay-solution.png";
 
-const navSections = [
-    {
-        heading: "Nos Solutions",
-        links: [
-            { text: "Digitale", href: "#digitale" },
-            { text: "Sécurité éléctronique", href: "#securite-electronique" },
-            { text: "Gestion d'encaissement", href: "#gestion-encaissement" },
-            { text: "Informatique & Télécom", href: "#informatique-telecom" },
-        ],
-    },
-    {
-        heading: "Company",
-        links: [{ text: "À propos", href: "/blog" }],
-    },
-];
+import FooterBrand from "./FooterBrand.astro";
+import FooterContact from "./FooterContact.astro";
+import FooterItem from "./FooterItem.astro";
 
-const linksLogos = [
+const infoFooter = {
+    title: "Contactez-nous",
+    adresse: "7 Rue des Tulipes, 01100 Oyonnax",
+    number: "07 58 82 46 05",
+};
+
+const solutionLink = {
+    title: "Solutions",
+    links: [
+        { text: "Digitale", href: "#digitale" },
+        { text: "Sécurité éléctronique", href: "#securite-electronique" },
+        { text: "Gestion d'encaissement", href: "#gestion-encaissement" },
+        { text: "Informatique & Télécom", href: "#informatique-telecom" },
+    ],
+};
+
+const about = {
+    title: "À propos",
+    links: [{ text: "À propos de nous", href: "/blog" }],
+};
+
+const logos = [
+    { name: "logo-linkedin", href: "#" },
     { name: "logo-instagram", href: "#" },
-    { name: "logo-facebook", href: "#" },
     { name: "logo-twitter", href: "#" },
 ];
 ---
 
 <footer class="bg-gray-900 text-white py-10">
-    <div
-        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pl-10"
-    >
-        <!-- Logo and Social Links -->
-        <div class="space-y-4">
-            <a href="#">
-                <Image
-                    src={aySolutionLogo}
-                    alt="ay solution logo"
-                    class="h-37 w-40"
-                />
-            </a>
-            <ul class="flex gap-6">
-                {
-                    linksLogos.map((link) => (
-                        <li>
-                            <a
-                                href={link.href}
-                                class="text-[#767676] text-[1.6rem] transition-all duration-300 hover:text-[#555]"
-                            >
-                                <ion-icon class="h-6 w-6" name={link.name} />
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-            <p class="text-gray-400 text-lg">
-                © <span class="year">2024</span> AY SOLUTION, Inc. All rights reserved.
-            </p>
+    <div class="container mx-auto px-8">
+        <div class="flex flex-wrap gap-10">
+            <FooterBrand
+                image={aySolutionLogo}
+                logos={logos}
+                copyright="© AY SOLUTION, Inc. All rights reserved"
+            />
+            <FooterContact
+                title={infoFooter.title}
+                ,
+                adresse={infoFooter.adresse}
+                ,
+                number={infoFooter.number}
+            />
+            <FooterItem title={solutionLink.title} links={solutionLink.links} />
+            <FooterItem title={about.title} links={about.links} />
         </div>
-
-        <!-- Contact Info -->
-        <div>
-            <p class="text-3xl font-semibold mb-4">Contactez-nous</p>
-            <address class="text-gray-400 not-italic space-y-4">
-                <p class="text-2xl">7 Rue des Tulipes, 01100 Oyonnax</p>
-                <p>
-                    <a class="text-white text-2xl hover:text-gray-400"
-                        >07 58 82 46 05</a
-                    ><br />
-                </p>
-            </address>
-        </div>
-
-        <!-- Dynamic Navigation Links using map -->
-        {
-            navSections.map((section) => (
-                <nav>
-                    <p class="text-3xl mb-4 font-semibold">{section.heading}</p>
-                    <ul class="text-2xl space-y-4 text-gray-400">
-                        {section.links.map((link) => (
-                            <li>
-                                <a href={link.href} class="hover:text-white">
-                                    {link.text}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-            ))
-        }
     </div>
 </footer>
