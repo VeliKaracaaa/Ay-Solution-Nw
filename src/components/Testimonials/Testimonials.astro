@@ -1,0 +1,70 @@
+---
+import HeaderSection from "../HeaderSection.astro";
+import TestimonialCustomer from "./TestimonialCustomer.astro";
+import Gallery from "./Gallery.astro";
+
+import dave from "../../content/img/customers/dave.jpg";
+import hannah from "../../content/img/customers/hannah.jpg";
+import steve from "../../content/img/customers/steve.jpg";
+import ben from "../../content/img/customers/ben.jpg";
+
+import gallery1 from "../../content/img/gallery/gallery-1.jpg";
+import gallery2 from "../../content/img/gallery/gallery-2.jpg";
+import gallery3 from "../../content/img/gallery/gallery-3.jpg";
+import gallery4 from "../../content/img/gallery/gallery-4.jpg";
+import gallery5 from "../../content/img/gallery/gallery-5.jpg";
+import gallery6 from "../../content/img/gallery/gallery-6.jpg";
+import gallery7 from "../../content/img/gallery/gallery-7.jpg";
+import gallery8 from "../../content/img/gallery/gallery-8.jpg";
+import gallery9 from "../../content/img/gallery/gallery-8.jpg";
+
+const testimonials = [
+    {
+        src: dave,
+        name: "Aissata Diallo",
+        text: "La pose de mon interphone avec cette société c'est passé à merveille je l'est recommande fortement, le travail est propre et très bien fait de plus ils sont sérieux.",
+    },
+    {
+        src: hannah,
+        name: "Gul Erk",
+        text: "Bonjour, j’ai fais réparer mon téléphone et franchement je ne regrette pas. Très professionnel travail très propres. Je recommande les yeux fermés",
+    },
+    {
+        src: steve,
+        name: "Tansu Argac",
+        text: "Je recommande fortement merci pour l’installation de mes caméras furkan et omer et très bon binôme professionnel et toujours à l’écoute.",
+    },
+    {
+        src: ben,
+        name: "Nicovali Longevolier",
+        text: "Compétences, amabilité, sérieux, rapidité ET tarifs qui défient toute concurrence. Je recommande + + +",
+    },
+];
+
+const galleryImages = [
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
+    gallery9,
+];
+
+const HeadersubTitle = "Témoignages";
+const HeaderTitle = "L'expérience de nos clients avec notre service";
+---
+
+<section class="bg-sky-100 py-24 px-8" id="temoignages">
+    <HeaderSection HeadersubTitle={HeadersubTitle} HeaderTitle={HeaderTitle} />
+    <div class="container mx-auto xl:flex xl:gap-12 xl:items-center">
+        <div class="xl:w-1/2">
+            <TestimonialCustomer testimonials={testimonials} />
+        </div>
+        <div class="xl:w-1/2 2xl:1/2">
+            <Gallery galleryImages={galleryImages} />
+        </div>
+    </div>
+</section>

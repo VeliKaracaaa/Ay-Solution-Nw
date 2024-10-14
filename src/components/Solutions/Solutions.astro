@@ -1,11 +1,11 @@
 ---
-import { Image } from "astro:assets";
-import digitale from "../content/img/app/digitale.jpg";
-import camera from "../content/img/app/camera.jpg";
-import paymentTerminal from "../content/img/app/paymentTerminalY.jpg";
-import reseaux from "../content/img/app/reseaux.jpg";
+import digitale from "../../content/img/app/digitale.jpg";
+import camera from "../../content/img/app/camera.jpg";
+import paymentTerminal from "../../content/img/app/paymentTerminalY.jpg";
+import reseaux from "../../content/img/app/reseaux.jpg";
 
-import HeaderSection from "./HeaderSection.astro";
+import HeaderSection from "../HeaderSection.astro";
+import SolutionItem from "./SolutionItem.astro";
 
 const solutions = [
     {
@@ -64,42 +64,11 @@ const solutions = [
     },
 ];
 
-const HeadersubTitle = "Nos Solutions";
 const HeaderTitle = "Des services sur mesure pour répondre à vos besoins";
+const HeadersubTitle = "Nos Solutions";
 ---
 
 <section class="pt-24 px-8" id="nos-solutions">
-    <HeaderSection HeadersubTitle={HeadersubTitle} HeaderTitle={HeaderTitle} />
-
-    <div class="container mx-auto">
-        {solutions.map((solution, index) => (
-            <div
-                class={`flex flex-col gap-y-12 mb-12 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} w-full gap-x-8 md:gap-x-12`} id={solution.id}
-            >
-                <!-- Texte -->
-                <div class="md:w-1/2">
-                {/* peut ici le id pour l'encrage */}
-                    <p class="mb-3 text-gray-300 text-6xl font-semibold md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
-                        {solution.number}
-                    </p>
-                    <h3 class="mb-8 text-sky-700 text-5xl tracking-tighter font-bold md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-7xl">
-                        {solution.title}
-                    </h3>
-                    <p class="text-3xl leading-normal md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
-                        {solution.text}
-                    </p>
-                    <ol class="pl-12 pt-8 list-disc text-3xl md:text-2xl md:pl-7 lg:text-3xl lg:pl-12 xl:text-4xl 2xl:text-5xl 2xl:pl-16">
-                        {solution.lists.map((list) => (
-                            <li>{list}</li>
-                        ))}
-                    </ol>
-                </div>
-                
-                <!-- Image -->
-                <div class="md:w-1/2">
-                    <Image src={solution.src} alt={solution.alt} class="h-full w-full" />
-                </div>
-            </div>
-        ))}
-</div>
+    <HeaderSection HeaderTitle={HeaderTitle} HeadersubTitle={HeadersubTitle} />
+    <SolutionItem solutions={solutions} />
 </section>
