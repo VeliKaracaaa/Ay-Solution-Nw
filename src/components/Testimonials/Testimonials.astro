@@ -8,15 +8,6 @@ import hannah from "../../content/img/customers/hannah.jpg";
 import steve from "../../content/img/customers/steve.jpg";
 import ben from "../../content/img/customers/ben.jpg";
 
-import gallery1 from "../../content/img/gallery/gallery-1.jpg";
-import gallery2 from "../../content/img/gallery/gallery-2.jpg";
-import gallery3 from "../../content/img/gallery/gallery-3.jpg";
-import gallery4 from "../../content/img/gallery/gallery-4.jpg";
-import gallery5 from "../../content/img/gallery/gallery-5.jpg";
-import gallery6 from "../../content/img/gallery/gallery-6.jpg";
-import gallery7 from "../../content/img/gallery/gallery-7.jpg";
-import gallery8 from "../../content/img/gallery/gallery-8.jpg";
-import gallery9 from "../../content/img/gallery/gallery-8.jpg";
 import w25 from "../../content/img/whatsApp/IMG-20241002-WA0025.png";
 import w09 from "../../content/img/whatsApp/IMG-20241002-WA0009.png";
 import w24 from "../../content/img/whatsApp/IMG-20241002-WA0024.png";
@@ -48,15 +39,15 @@ const testimonials = [
     },
 ];
 
-const galleryImages = [gallery1, gallery2, w18, w20, w05, w04, w24, w09, w25];
+const galleryImages = [w18, w18, w18, w20, w05, w04, w24, w09, w25];
 
 const HeadersubTitle = "Témoignages";
 const HeaderTitle = "L'expérience de nos clients avec notre service";
 ---
 
-<section class="bg-sky-100 py-24 px-8" id="temoignages">
+<section class="bg-sky-100 py-24" id="temoignages">
     <HeaderSection HeadersubTitle={HeadersubTitle} HeaderTitle={HeaderTitle} />
-    <div class="container mx-auto xl:flex xl:gap-12 xl:items-center">
+    <div class="container mx-auto px-8 xl:flex xl:gap-12 xl:items-center">
         <div class="xl:w-1/2">
             <TestimonialCustomer testimonials={testimonials} />
         </div>
