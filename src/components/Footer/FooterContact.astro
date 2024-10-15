@@ -7,7 +7,9 @@ const { title, number, adresse } = Astro.props;
     <address
         class="text-gray-400 text-xl not-italic space-y-4 hover:text-white md:text-xl lg:text-3xl"
     >
-        <p class="">{adresse}</p><br />
-        <p class="text-white hover:text-gray-400">{number}</p>
+        <p>{adresse}</p><br />
+        <p class="text-white hover:text-gray-400">
+            <a href="tel:0758824650">{number}</a>
+        </p>
     </address>
 </div>
