@@ -11,16 +11,16 @@ const { solutions } = Astro.props;
             >
                 <!-- Texte -->
                 <div class="md:w-1/2">
-                    <p class="mb-3 text-gray-300 text-6xl font-semibold md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+                    <p class="mb-3 text-gray-300 text-5xl font-semibold sm:text-6xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
                         {solution.number}
                     </p>
-                    <h3 class="mb-8 text-sky-700 text-5xl tracking-tighter font-bold md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-7xl">
+                    <h3 class="mb-8 text-sky-700 text-4xl sm:text-5xl tracking-tighter font-bold md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-7xl">
                         {solution.title}
                     </h3>
-                    <p class="text-3xl leading-normal md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                    <p class="text-xl leading-normal sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
                         {solution.text}
                     </p>
-                    <ol class="pl-12 pt-8 list-disc text-3xl md:text-2xl md:pl-7 lg:text-3xl lg:pl-12 xl:text-4xl 2xl:text-5xl 2xl:pl-16">
+                    <ol class="pl-12 pt-8 list-disc text-xl sm:text-3xl md:text-2xl md:pl-7 lg:text-3xl lg:pl-12 xl:text-4xl 2xl:text-5xl 2xl:pl-16">
                         {solution.lists.map((list) => (
                             <li>{list}</li>
                         ))}
