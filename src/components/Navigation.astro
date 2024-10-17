@@ -13,12 +13,14 @@ const navLinks = [
 ];
 ---
 
-<div class="flex items-center gap-8">
+<div
+    class="nav-links z-40 fixed inset-0 w-full h-full bg-white flex flex-col justify-center items-center gap-12 py-5 sm:flex-row sm:gap-8"
+>
     {
         navLinks.map((link) => (
             <a
                 href={link.href}
-                class="inline-block text-gray-800 font-medium text-2xl hover:text-sky-800 active:text-sky-800 transition-colors duration-300"
+                class="text-gray-800 text-2xl font-medium uppercase sm:inline-block sm:font-medium sm:text-2xl hover:text-sky-800 active:text-sky-800 transition-colors sm:duration-300"
             >
                 {link.text}
             </a>
@@ -26,7 +28,7 @@ const navLinks = [
     }
     <a
         href="#demandez-un-devis"
-        class="inline-block rounded-xl bg-sky-400 text-white py-3 px-6 font-medium text-2xl hover:bg-sky-800 active:bg-sky-800 transition-colors duration-300"
+        class="sm:inline-block rounded-xl bg-sky-400 text-white py-3 px-6 font-medium text-2xl hover:bg-sky-800 active:bg-sky-800 transition-colors duration-300"
         >Demandez un devis</a
     >
 </div>
