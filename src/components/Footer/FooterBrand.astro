@@ -16,5 +16,8 @@ const { image, logos, copyright } = Astro.props;
             ))
         }
     </ul>
-    <p class="text-gray-400 text-lg leading-tight md:text-xl">{copyright}</p>
+    <p class="text-gray-400 text-lg leading-tight md:text-xl">
+        <span class="year"></span>
+        {copyright}
+    </p>
 </div>

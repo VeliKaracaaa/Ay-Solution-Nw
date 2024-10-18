@@ -24,7 +24,7 @@ const navLinks = [
 
 <!-- 1) hide visually opacity-0 2) make it unaccesible to mouse and keybord pointer-events-none 3) hide it from screen readers invisible -->
 <nav
-    class="nav-open nav-links absolute transform translate-x-full bg-white/95 opacity-0 pointer-events-none invisible top-0 left-0 w-full h-screen flex items-center justify-center transition-all duration-700 ease-in"
+    class="nav-open nav-links absolute transform translate-x-full bg-white/95 opacity-0 pointer-events-none invisible top-0 left-0 w-full h-screen flex items-center justify-center transition-all duration-500 ease-in"
 >
     <ol class="flex flex-col items-center gap-12 sm:gap-8">
         {
@@ -48,30 +48,3 @@ const navLinks = [
         </li>
     </ol>
 </nav>
-
-<!-- .nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
-}
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover, a:focus {
-  background-color: #ff9776;
-}
-
-.expanded {
-  display: unset;
-} -->
