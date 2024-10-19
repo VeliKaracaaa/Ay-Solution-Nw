@@ -24,9 +24,9 @@ const navLinks = [
 
 <!-- 1) hide visually opacity-0 2) make it unaccesible to mouse and keybord pointer-events-none 3) hide it from screen readers invisible -->
 <nav
-    class="fixed nav-links transform translate-x-full bg-white/95 opacity-0 pointer-events-none invisible top-0 left-0 w-full h-screen flex items-center justify-center transition-all duration-500 ease-in"
+    class="nav-links absolute flex items-center justify-center sm:relative sm:transform-none sm:bg-transparent sm:opacity-100 sm:pointer-events-auto sm:visible transform translate-x-full bg-white/95 opacity-0 pointer-events-none invisible top-0 left-0 w-full h-screen sm:h-auto sm:w-auto transition-all duration-500 ease-in"
 >
-    <ol class="flex flex-col items-center gap-12 sm:gap-8">
+    <ol class="flex flex-col items-center gap-12 sm:flex-row sm:gap-8">
         {
             navLinks.map((link) => (
                 <li>
