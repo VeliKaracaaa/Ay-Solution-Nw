@@ -10,6 +10,7 @@ html {
 	/* Percentage of user's browser font-size setting */
 	font-size: 62.5%;
 	overflow-x: hidden;
+	overflow: hidden;
 }
 
 body {
@@ -19,5 +20,5 @@ body {
     color: #555;
 	/* Only work if there is nothing absolutely positioned in relation to body  */
 	overflow-x: hidden;
-
+	overflow: hidden;
 }
