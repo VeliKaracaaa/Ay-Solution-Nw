@@ -4,15 +4,16 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     document.querySelector(".close-outline").classList.toggle("hidden");
 
     // Toggle the 'nav-open' class on the navigation
-    document.querySelector('.nav-links').classList.toggle('nav-open');
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('nav-open');
 
     // Add/remove overflow hidden to both <html> and <body> when menu is open
-    if (document.querySelector('.nav-links').classList.contains('nav-open')) {
-        document.documentElement.style.overflow = 'hidden'; // Apply to <html>
-        document.body.style.overflow = 'hidden';            // Apply to <body>
+    if (navLinks.classList.contains('nav-open')) {
+        document.documentElement.style.overflow = 'hidden'; // Appliquer à <html>
+        document.body.style.overflow = 'hidden';            // Appliquer à <body>
     } else {
-        document.documentElement.style.overflow = 'auto';   // Reset <html>
-        document.body.style.overflow = 'auto';              // Reset <body>
+        document.documentElement.style.overflow = 'auto';   // Réinitialiser <html>
+        document.body.style.overflow = 'auto';              // Réinitialiser <body>
     }
 });
 
@@ -31,3 +32,25 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         document.body.style.overflow = 'auto';
     });
 });
+
+// Sticky
+const sectionHeroEl = document.querySelector('.hero-section');
+
+const obs = new IntersectionObserver(function (entries) {
+    const ent = entries[0];
+    console.log(ent)
+    if(ent.isIntersecting === false) {
+      document.querySelector('.header').classList.add('fixed', 'top-0', 'w-full', 'z-50');
+      document.querySelector('.header').classList.remove('relative');
+    } else {
+      document.querySelector('.header').classList.remove('fixed', 'top-0', 'w-full', 'z-50');
+      document.querySelector('.header').classList.add('relative');
+    }
+  }, 
+  {
+    // In the view port
+    root: null,
+    threshold: 0,
+});
+
+obs.observe(sectionHeroEl);

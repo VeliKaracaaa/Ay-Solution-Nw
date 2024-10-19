@@ -5,8 +5,10 @@ import { Image } from "astro:assets";
 import aySolutionLogo from "../content/img/logos/ay-solution.png";
 ---
 
-<!-- We want to heade to be sticky later -->
-<header class="relative flex justify-between items-center h-40 px-8">
+<!-- We want to heade to be sticky later --><!-- fixed top-0 w-full z-50 -->
+<header
+    class="header relative flex justify-between items-center h-auto px-8 bg-white"
+>
     <Image
         src={aySolutionLogo}
         alt="ay solution logo"
