@@ -1,4 +1,4 @@
-// Toggle visibility of icons in the hamburger menu
+// Toggle visibility of icons in the Navigation menu
 document.querySelector(".hamburger").addEventListener("click", () => {
     document.querySelector(".menu-outline").classList.toggle("hidden");
     document.querySelector(".close-outline").classList.toggle("hidden");
