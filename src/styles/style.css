@@ -6,8 +6,11 @@
 
 html {
     font-size: 62.5%;
-    /* overflow-x: hidden; Prévenir le débordement horizontal */
-    overflow: auto; /* Autoriser le défilement vertical par défaut */
+    /* Prévenir le débordement horizontal */
+    /* overflow-x: hidden; */
+     overflow-x: hidden !important;
+    /* Autoriser le défilement vertical par défaut */ 
+    overflow: auto;
     scroll-behavior: smooth; /* Comportement de défilement fluide */
 }
 
@@ -16,6 +19,9 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #555;
-    /* overflow-x: hidden; Prévenir le débordement horizontal */
-    overflow: auto; /* Autoriser le défilement vertical par défaut */
+    /*Prévenir le débordement horizontal*/
+    /* overflow-x: hidden;  */
+     overflow-x: hidden !important;
+    /* Autoriser le défilement vertical par défaut */
+    overflow: auto;
 }
